@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
-  darkMode: false, // 'media' or 'class'
+  media: true, // 'darkMode' or 'class'
   purge: {
     content: ["./app/**/*.{js,ts,jsx,tsx}"],
     options: {
