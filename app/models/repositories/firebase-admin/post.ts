@@ -12,6 +12,7 @@ const postConverter: FirestoreDataConverter<Post> = {
       uid: snapshot.id,
       title: data.title,
       description: data.description,
+      image: data.image,
       content: data.content,
       createdAt: data.createdAt.toDate(),
       updatedAt: data.createdAt.toDate(),
