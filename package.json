@@ -7,9 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --cache",
-    "lint:fix": "eslint . --cache --fix"
+    "lint:fix": "eslint . --cache --fix",
+    "lint:prettier": "prettier --check '**.*.{js,ts,jsx,tsx}'"
   },
   "dependencies": {
+    "firebase": "^9.13.0",
+    "firebase-admin": "^11.2.0",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
