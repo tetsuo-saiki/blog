@@ -8,6 +8,7 @@ const getData = async (): Promise<Post[]> => {
   // Similar to `getStaticProps` with the `revalidate` option.
   const res = await fetch(`${publicUrl}/api/posts`, {
     next: { revalidate: 10 },
+    method: "POST",
   });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
