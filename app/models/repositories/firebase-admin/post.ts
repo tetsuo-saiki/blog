@@ -29,3 +29,15 @@ export const getPosts = async (): Promise<Post[]> => {
 
   return snapshot.docs.map((doc) => doc.data());
 };
+
+export const getPost = async (id: string): Promise<Post | undefined> => {
+  const doc = await admin
+    .firestore()
+    .collection("posts")
+    .withConverter(postConverter)
+    .doc(id)
+    .get();
+  if (!doc.exists) return;
+
+  return doc.data();
+};
