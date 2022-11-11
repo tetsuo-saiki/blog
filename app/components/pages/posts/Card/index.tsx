@@ -10,7 +10,7 @@ type Props = {
 export const PostCard = ({ post }: Props) => {
   return (
     <Link href={`/post/${post.uid}`}>
-      <div className="h-64 w-96 rounded-lg border">
+      <div className="h-full w-full rounded-lg border">
         {post.image ? (
           <Image src={post.image} width={384} height={256} alt={post.title} />
         ) : (

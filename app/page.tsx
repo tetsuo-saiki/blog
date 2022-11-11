@@ -19,9 +19,11 @@ const Home = async () => {
 
   return (
     <div className="my-8">
-      {posts.map((post) => (
-        <PostCard key={post.uid} post={post} />
-      ))}
+      <div className="grid grid-cols-3">
+        {posts.map((post) => (
+          <PostCard key={post.uid} post={post} />
+        ))}
+      </div>
     </div>
   );
 };
